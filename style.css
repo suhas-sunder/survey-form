@@ -1,0 +1,105 @@
+body{
+    background-color: #E3E3E6;
+    display:grid;       
+    grid-template-rows: 2fr 1fr 10fr;
+    grid-template-columns: 1fr;
+}
+
+/*fill the backgroudn color white with opactiy.*/
+#background-fill{
+    width:100px;
+    height:100px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    background-color:white;
+    opacity: .9;
+    z-index: -1;
+}
+
+#header-block{
+    grid-row: 1 /span 2;
+    grid-column: 1/span 1;
+    display:block;
+    z-index: -1;
+}
+
+#header-image{    
+    width:100%;
+}
+#container{
+    grid-row: 2/span 2;
+    grid-column: 1/span 1;
+    margin-left: auto;
+    margin-right: auto;    
+    width: 100%;       
+    max-width: 900px;
+    min-width: 520px;
+    display: block;
+    position: relative; 
+    z-index: 1;
+}
+
+/***** Header section *****/
+h1{
+    margin:6%;
+    font-size: 5rem;
+    color: #F5546F;
+}
+
+/***** Contact Us section *****/
+/*Sub-header*/
+h3 {
+    margin:0;
+    padding: 5% 10% 0 10%;
+    font-size: 2rem;
+}
+
+#contact-information{     
+    padding: 0 15% 0 15%;
+    display:flex;
+    grid-template-columns: 1fr 1fr;    
+}
+
+#contact-information div{   
+    width:100%;
+    font-size: 1.4rem;
+}
+
+/*Email Link*/
+a{
+    color: #AE063C;
+}
+
+/***** Survey Form section *****/
+
+
+/*Resize for tablet and mobile devices when screen width is 970px or less.*/
+@media screen and (max-width: 970px){
+    body{   
+        grid-template-rows: 1fr 2fr 10fr;
+    }
+
+}
+
+/*Resize for smaller mobile devices when screen width is 480px or less.*/
+@media screen and (max-width: 780px){ 
+    h1{
+        margin:6% 3% 6% 3%;
+    }
+    
+    h3 {
+        padding: 5% 5% 0 5%;
+        font-size: 1.6rem;
+    }
+
+    #contact-information{   
+        padding: 0 10% 0 10%;
+    }
+    
+    #contact-information div{   
+        font-size: 1.1rem;
+    }
+}
+    
