@@ -8,41 +8,174 @@
 </head>
 
 <body>
-    <div id="header-block">
-        <img id="header-image" src="images/header-banner.jpg" alt="A statue of Mahatma Gandhi. Image by Dimitris Vetsikas from Pixabay.">
-    </div>
-    
-    <div id="container">
-        <div id="background-fill"></div>
-
-        <header id="title">
-            <h1>Survey Form</h1>
+    <div id="header-image" >
+        <img id="header-image" src="images/header-banner.jpg" alt="Header image of a person sitting at a desk writing in a book.">
+        <header>
+            <div id="background-fill"></div>   
+            <h1 id="title">Survey Form</h1>
         </header>
-
-        <div>
-            <h3>Contact Us</h3>
-        </div>
-        <div id="contact-information">            
-            <div>                
-                <p>Inner City Artstation <br> 2628 Toronto Cres <br> NW, Calgary, AB,  <br> T2N 3W1</p>                
-            </div>
-
+    </div>
+            
+    <div id="container">
+        <section>
             <div>
-                <p>(499) 388-4080</p>
-                <a>innercityartstation@gmail.com</a>
-
+                <h3 id="sub-header">Contact Information</h3>
             </div>
-        </div>
+            
+            <div id="contact-information">            
+                <div>                
+                    <p id="description" class="description">Inner City Artstation</p>
+                    <p class="description">2628 Toronto Cres</p>
+                    <p class="description">NW, Calgary, AB</p>
+                    <p class="description">T2N 3W1</p> 
+                </div>
+
+                <div>
+                    <p class="right-align">(499) 388-4080</p>
+                    <a class="right-align" href="mailto:innercityartstation@gmail.com">innercityartstation@gmail.com</a>
+                </div>
+            </div>
+        </section>
         
         <form id="survey-form">
+            <div class="form-element">
+                <label id="name-label" class="label">Full Name <span class="asterisk">*</span></label>
+                <div class="border">
+                    <input id="name" type="text" name="name" placeholder="Enter your name" required>
+                </div>
+            </div>
 
+            <div class="form-element">
+                <label id="email-label" class="label">Email <span class="asterisk">*</span></label>                
+                <div class="border">
+                    <input id="email" type="email" name="email" placeholder="Enter your email" required>
+                </div>
+            </div>
+            
+            <div class="form-element">
+                <label id="number-label" class="label">Age</label>                
+                <div class="border">
+                    <input id="number" type="number" name="age" min="1" max="125" placeholder="Enter your age">
+                </div>
+            </div>     
+            
+            <div class="form-element">
+                <p class="label">Which option best describes your current role? <span class="asterisk">*</span></p>
+                <div class="border">
+                    <select id="dropdown" name="occupation" required>                    
+                        <option disabled selected value>Select an option</option>
+                         <option value="Student">Student</option>
+                        <option value="Unemployed">Unemployed</option>
+                        <option value="Full Time job">Full Time job</option>
+                        <option value="Part Time job">Part Time job</option>
+                        <option value="Prefer not to answer">Prefer not to answer</option>
+                    </select>        
+                </div>       
+            </div>
+
+            <div class="form-element">
+                <p class="label">How did you hear about us? (Check all that apply)</p>     
+                <label class="checkbox-label">
+                    <input class="input-checkbox" type="checkbox" name="feedback" value="Advertising"> Advertising
+                </label>    
+                <label class="checkbox-label">
+                    <input class="input-checkbox" type="checkbox" name="feedback" value="Social Media"> Social Media
+                </label>    
+                <label class="checkbox-label">
+                    <input class="input-checkbox" type="checkbox" name="feedback" value="Search Engine"> Search Engine
+                </label>    
+                <label class="checkbox-label">
+                    <input class="input-checkbox" type="checkbox" name="feedback" value="Through a friend"> Through a friend
+                </label class="checkbox-label">  
+                <label id="other-label" class="checkbox-label">Other:
+                    <div id="other-border" class="border">
+                        <input id="other" type="text" name="Other" placeholder="Enter text here...">
+                    </div>
+                </label>                          
+            </div>    
+
+            <div class="form-element">
+                <p class="label">Which of our products have you used? (Check all that apply)</p>    
+                <label class="checkbox-label">
+                    <input id="painting-checkbox" class="input-checkbox" type="checkbox" name="recommendation" value="painting course"> Painting course
+                </label> 
+                <label class="checkbox-label">
+                    <input id="photography-checkbox" class="input-checkbox" type="checkbox" name="recommendation" value="photography course"> Photography course
+                </label>
+                <label class="checkbox-label">
+                    <input id="art-checkbox" class="input-checkbox" type="checkbox" name="recommendation" value="Advanced art course"> Advanced art course
+                </label>     
+                <label class="checkbox-label">
+                    <input id="drawing-checkbox" class="input-checkbox" type="checkbox" name="recommendation" value="Drawing fundamentals course"> Drawing fundamentals course
+                </label>      
+            </div>  
+
+            <div id="slider-block" class="form-element">
+                <p class="label">How would you rate our products?</p>   
+                <div class="slider-cointainer">              
+                    <label class="slider-label"> Painting Course
+                        <input id="slider_1" type="range" min="0" max="10" value="5">
+                        <output id="slider-out_1"></output>
+                    </label>    
+                </div> 
+                <div class="slider-cointainer">                
+                    <label class="slider-label"> Photography course
+                        <input id="slider_2" type="range" min="0" max="10" value="5">
+                        <output id="slider-out_2"></output>
+                    </label> 
+                </div>
+                <div class="slider-cointainer">    
+                    <label class="slider-label"> Advanced art course
+                        <input id="slider_3" type="range" min="0" max="10" value="5">
+                        <output id="slider-out_3"></output>
+                    </label> 
+                </div>
+                <div class="slider-cointainer">    
+                    <label class="slider-label"> Drawing fundamentals course
+                        <input id="slider_4" type="range" min="0" max="10" value="5">
+                        <output id="slider-out_4"></output>
+                    </label> 
+                </div>
+            </div>  
+
+            <div class="form-element">
+                <p class="label">How likely are you to recommend us to a friend of colleague? <span class="asterisk">*</span></p>     
+                <label class="checkbox-label">                        
+                    <input class="input-checkbox" type="radio" name="feedback" value="Definately" required> Definately
+                </label>    
+                <label class="checkbox-label">
+                    <input class="input-checkbox" type="radio" name="feedback" value="Maybe" required> Maybe
+                </label>    
+                <label class="checkbox-label">
+                    <input class="input-checkbox" type="radio" name="feedback" value="Not Sure" required> Not Sure
+                </label>    
+                <label class="checkbox-label">
+                    <input class="input-checkbox" type="radio" name="feedback" value="Highly Unlikely" required> Highly Unlikely
+                </label>       
+            </div>  
+
+            <div class="form-element">
+                <p class="label">Additional comments or suggestions?</p>                     
+                <div id="text-border">
+                    <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+                </div>
+            </div>  
+            
+            <div class="form-element">                               
+                <button id="submit" type="submit">Submit</button>
+            </div>            
         </form>        
     </div>
-
 </body>
 
-<footer>
-
+<footer id="footer">
+    <a id="return-top" href="#top" title="Return to top"></a>
+        <p>Written and coded by <a class="format-link" href="https://www.freecodecamp.org/suhassunder" target="_blank">Suhas Sunder</a></p>
+        <div>
+            <img id="github-img" src="images/github.png" alt="Github logo image">   
+            <p><a class="format-link" href="https://github.com/suhas-sunder/Build-a-Tribute-Page.git" target="_blank">View Source</a> on Github</p>
+        </div>
+    <script src="script.js"></script 
 </footer>
 
 </html>
