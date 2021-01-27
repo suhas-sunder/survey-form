@@ -1,4 +1,5 @@
 body{
+    margin:auto;
     background-color: #E3E3E6;
 }
 
@@ -6,10 +7,8 @@ body{
 #background-fill {
     width:100px;
     height:100px;
-    width: 100%;
+    width: 900px;
     height: 100%;
-    max-width: 900px;
-    min-width: 480px;
     display: block;
     position: absolute;
     background-color:white;    
@@ -24,14 +23,11 @@ body{
     width:100%;    
     display:block;
     position: relative;
-    min-width: 480px;
 }
 
 #container {
     margin: auto;    
-    width: 100%;       
-    max-width: 900px;
-    min-width: 480px;
+    max-width: 900px;       
     display: block;
     z-index: 1;
     background-color: white;        
@@ -96,6 +92,7 @@ section {
 a {
     color:#AC0030;
     text-decoration: none;
+    word-wrap: break-word;
 }
 
 /***** Survey Form section *****/
@@ -227,6 +224,7 @@ input::placeholder {
 
 #submit {
     width: 100%;
+    margin-bottom: 5%;
     height: 50px;
     border: 1px solid #F65570;
     outline: none;
@@ -272,11 +270,15 @@ input::placeholder {
     user-select: none;
 }
 
-/*Resize for smaller mobile devices when screen width is 760px or less.*/
-@media screen and (max-width: 760px) { 
+/*Resize for smaller mobile devices when screen width is 900px or less.*/
+@media screen and (max-width: 900px) { 
     #title {
         margin: 5%;
         font-size: 4.5rem;
+    }
+
+    #container, #background-fill {
+        width:100%;
     }
 
     section {
@@ -285,7 +287,7 @@ input::placeholder {
     }
 
     #sub-header {
-        font-size: 2.7rem;
+        font-size: 2.2rem;
         margin: 0; 
         
     }
@@ -301,7 +303,7 @@ input::placeholder {
     }
 
     #contact-information div { 
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .form-element {
@@ -309,10 +311,26 @@ input::placeholder {
         padding-bottom: 5%;
     }
 
-    select, #name, #email, #number, #other {
+    #name, #email, #number, #other {
         font-size: 1.4rem;
     }
 
+    select{
+        border: 1px solid #F65570;
+        font-size: 1.4rem;
+    }
+
+    #dropdown-border{
+        display:flex;
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+    
+    #other-border {
+        width: 70%;
+    }
+    
     .label {
         padding: 4% 3%;
         font-size: 1.8rem;
@@ -338,5 +356,16 @@ input::placeholder {
     } 
 }
 
+
+@media screen and (max-width: 480px) { 
+    #title {
+        margin: 5%;
+        font-size: 3rem;
+    }
+
+    .label {
+        padding: 4% 0;
+    }
+}
 
 
